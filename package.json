@@ -57,7 +57,7 @@
     "kepler.gl": "1.0.0-2",
     "leveldown": "^5.4.1",
     "levelup": "^4.3.2",
-    "lodash": "4.17.11",
+    "lodash": "4.17.13",
     "material-ui-pickers": "2.2.4",
     "material-ui-slider": "3.0.3",
     "memoize-one": "^5.1.1",
