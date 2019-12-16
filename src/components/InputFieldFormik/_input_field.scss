@@ -1,0 +1,12 @@
+.input-form-control{
+
+  .error-wrapper{
+    display:  flex ;
+    flex-direction: row;
+    .error-message{
+      padding-top: 2px;
+      padding-left: 3px;
+
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import '../../styles/animate_base_container';
+
+.gmap-wrapper{
+  .search-textbox {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    //z-index: 2000;
+    height: 35px;
+    opacity: 0;
+    animation: animate-base-container 850ms forwards;
+  }
+  .gm-style .gm-style-iw-d::-webkit-scrollbar-track, .gm-style .gm-style-iw-d::-webkit-scrollbar-track-piece{
+    background: inherit;
+  }
+  .gm-style .gm-style-iw{
+    background-color: #3a464f;
+    color: whitesmoke;
+    opacity: .9;
+    text-align: left;
+    font-weight: bold;
+  }
+
+  .search-textbox.error{
+    border: 1px solid #f44336;
+  }
+}
+
+
+.pac-container{
+  z-index: 1600;
+
+}

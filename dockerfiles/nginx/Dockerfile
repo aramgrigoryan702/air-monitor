@@ -1,0 +1,52 @@
+###############################################################################
+# Step 1 : Run Npm /install
+#
+# Use node v12.9.1
+FROM node:12.9.1 AS builder
+RUN npm  install yarn -g
+
+WORKDIR /usr/src/app
+
+
+#COPY yarn.lock .
+COPY config-overrides.js .
+COPY package.json .
+COPY yarn.lock .
+RUN yarn install
+
+
+RUN ls
+COPY src src
+COPY public public
+COPY .env.docker .env
+COPY tsconfig.json .
+RUN ls
+
+RUN yarn build
+RUN ls
+
+###############################################################################
+
+
+###############################################################################
+# Step 2 : Build Server image
+#
+# Use nginx
+FROM nginx
+
+
+#COPY dockerfiles/nginx/nginx.conf /etc/nginx/conf.d/nginx.conf
+COPY dockerfiles/nginx/nginx_default.conf /etc/nginx/conf.d/default.conf
+
+COPY dockerfiles/nginx/proxy.conf /etc/nginx/conf.d/proxy.conf
+
+COPY dockerfiles/nginx/custom.conf /etc/security/limits.d/custom.conf
+
+RUN ulimit -n
+
+WORKDIR /var/www/
+
+COPY --from=builder /usr/src/app/build .
+RUN ls
+
+EXPOSE 8090

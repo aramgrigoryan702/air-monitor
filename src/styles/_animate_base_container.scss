@@ -1,0 +1,79 @@
+@keyframes animate-base-container {
+  from {
+    opacity: 0;
+    transform: scale(1.1)
+  }
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+
+@keyframes animate-bezier-container {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.section-experience .case-light.animate {
+  -webkit-animation: light-blink 1.3s infinite;
+  animation: light-blink 1.3s infinite
+}
+
+.section-experience .case-light.go-on-state {
+  -webkit-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+  background-color: #fff
+}
+
+.section-experience .case-light.go-green {
+  -webkit-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+  background-color: #3aff76
+}
+
+.section-experience .case-light.hide {
+  opacity: 0;
+  -webkit-transition: opacity 200ms linear;
+  transition: opacity 200ms linear
+}
+
+@-webkit-keyframes light-blink {
+  0% {
+    background-color: #9d9d9d
+  }
+  38.46% {
+    background-color: #fff
+  }
+  50% {
+    background-color: #fff
+  }
+  88.46% {
+    background-color: #9d9d9d
+  }
+  100% {
+    background-color: #9d9d9d
+  }
+}
+
+@keyframes light-blink {
+  0% {
+    background-color: #9d9d9d
+  }
+  38.46% {
+    background-color: #fff
+  }
+  50% {
+    background-color: #fff
+  }
+  88.46% {
+    background-color: #9d9d9d
+  }
+  100% {
+    background-color: #9d9d9d
+  }
+}

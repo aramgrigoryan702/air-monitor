@@ -1,0 +1,198 @@
+.chart-container {
+  font-size: 16px;
+  font-family: Roboto;
+  font-weight: 800;
+  height: 100%;
+  text {
+    font-feature-settings: 'tnum' 1;
+  }
+
+  .arrow {
+    fill: white;
+    font-feature-settings: 'tnum' 1;
+    shape-rendering: crispEdges;
+  }
+
+  .axis path,
+  .axis line,
+  .axis1 path,
+  .axis1 line {
+    fill: none;
+    stroke: #E6E7E8;
+    shape-rendering: crispEdges;
+  }
+
+  .axis {
+    text {
+      font-size: 12px;
+      font-feature-settings: 'tnum' 1;
+    }
+  }
+
+  .axis1 {
+    text {
+      font-size: 12px;
+      font-feature-settings: 'tnum' 1;
+    }
+  }
+
+  .x.axis path, .x.axis1 path {
+    display: none;
+  }
+
+  .brush .extent {
+    stroke: lightgray;
+    shape-rendering: crispEdges;
+  }
+
+  .x.brush {
+    fill: #283237;
+    height: 50px;
+    .selection {
+      fill: lightslategray;
+      fill-opcacity: .2;
+      stroke-linecap: round;
+      height: 50px
+    }
+
+    .handle {
+      fill: none;
+      stroke-width: 10px;
+      stroke-linecap: round;
+      stroke: lightgray;
+      height: 50px
+    }
+  }
+
+
+  .line {
+    fill: none;
+    stroke-width: 2px;
+  }
+  .additional-line{
+    fill: none;
+    stroke-width: 2px;
+    stroke-dasharray: 5,5;
+  }
+
+  .hover-line {
+    stroke: white;
+    fill: none;
+    stroke-width: 1px;
+    left: 10px;
+    shape-rendering: crispEdges;
+    opacity: .3;
+    font-feature-settings: 'tnum' 1;
+  }
+
+  .hover-text {
+    stroke: none;
+    font-size: 30px;
+    font-weight: bold;
+    fill: white;
+  }
+
+  .chart {
+    // background: lightgray;
+    // border: 1px solid black;
+
+  }
+
+  .y-axis-label {
+    fill: white;
+    font-size: 16px;
+    text-anchor: middle;
+    transform: rotate(-90deg);
+  }
+
+  .tooltip {
+    opacity: 0;
+    position: absolute;
+    top: -14px;
+    left: 0;
+    padding: 0.6em 1em;
+    // background: #000000;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    z-index: 10;
+    transition: all 0.1s ease-out;
+    pointer-events: none;
+  }
+
+  .tooltip:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    background: white;
+    border: 1px solid #ddd;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    transform: translate(-50%, 50%) rotate(45deg);
+    transform-origin: center center;
+    z-index: 10;
+  }
+
+  .tooltip-date {
+    margin-bottom: 0.2em;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.4em;
+  }
+}
+
+.tooltip {
+  opacity: 0;
+  position: absolute;
+  top: -14px;
+  left: 0;
+  padding: 0.6em 1em;
+  // background: #000000;
+  text-align: center;
+  line-height: 1.4em;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  z-index: 10;
+  transition: all 0.1s ease-out;
+  pointer-events: none;
+}
+
+.tooltip:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  //background: white;
+  border: 1px solid #ddd;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  transform: translate(-50%, 50%) rotate(45deg);
+  transform-origin: center center;
+  z-index: 10;
+}
+
+.tooltip-date {
+  margin-bottom: 0.2em;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.4em;
+}
+
+.mouse-tracker {
+  fill: #283237;
+}
+
+.focus {
+  fill: transparent;
+}
+
+.zoom {
+  cursor: move;
+  fill: none;
+  pointer-events: all;
+}

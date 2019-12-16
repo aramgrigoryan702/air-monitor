@@ -1,0 +1,53 @@
+.treebar{
+  margin: 0px;
+  padding: 0px;
+  height: calc(100%);
+  position: relative;
+  display: block;
+  overflow: hidden;
+
+  .listItemText{
+    span{
+      margin: 0px;
+      padding: 0px;
+      font-size: .7rem !important;
+    }
+  }
+  .p-tree{
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+    height: calc(100% - 60px);
+    position: relative;
+    display: block;
+    overflow: hidden;
+    overflow-y: auto;
+    padding-bottom: 10px;
+    .p-tree-container{
+      padding: 0px;
+      padding-bottom: 10px;
+      overflow: hidden;
+      overflow-y: auto;
+    }
+    .p-treenode-label{
+      padding: 0px;
+    }
+  }
+  .p-tree .p-tree-toggler{
+    margin: 0px;
+    padding: 0px;
+    color: white;
+
+  }
+  .p-tree .p-treenode{
+     padding: 0px;
+    .p-treenode-content .p-treenode-selectable:focus{
+      outline: none;
+      border: 2px solid #305780;
+    }
+    .p-treenode-content .p-treenode-selectable[aria-expanded="true"] {
+      outline: auto 5px -webkit-focus-ring-color;
+    }
+  }
+
+}

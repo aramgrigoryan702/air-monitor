@@ -1,0 +1,30 @@
+.windrose-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  letter-spacing: -0.011em;
+  font-family: Roboto;
+  font-size: 16px;
+
+  .Line {
+    fill: none;
+    stroke: #E6E7E8;
+    shape-rendering: crispEdges;
+    stroke-width: 1px;
+    stroke-opacity: .8;
+    font-feature-settings: 'tnum' 1;
+    opacity: .8;
+    transition: opacity 0.3s ease 0s;
+  }
+
+  .Path{
+    opacity: .8;
+    transition: opacity 0.3s ease 0s;
+    shape-rendering: crispEdges;
+    color-rendering: optimizeQuality;
+  }
+    text {
+      font-size: 12px;
+      font-feature-settings: 'tnum' 1;
+    }
+}
