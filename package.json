@@ -31,7 +31,7 @@
     "@vx/tooltip": "0.0.189",
     "@vx/voronoi": "0.0.189",
     "ajv": "6.10.0",
-    "axios": "0.18.0",
+    "axios": "0.21.1",
     "axios-cancel": "0.2.2",
     "axios-retry": "^3.1.2",
     "babel-loader": "^8.0.6",
